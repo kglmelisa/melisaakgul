@@ -11,6 +11,8 @@ collections:
     folder: "content/projects"
     create: true
     delete: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
     identifier_field: title
     fields:
@@ -36,6 +38,8 @@ collections:
       - name: "settings"
         label: "İletişim & Fotoğraflar"
         file: "content/settings.json"
+        extension: "json"
+        format: "json"
         fields:
           - { label: "E-posta", name: "email", widget: "string" }
           - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
