@@ -1,0 +1,6 @@
+{
+  "name": "Melisa Akgül Portfolio",
+  "description": "Melisa Akgül, mobil ve PC oyunları için kullanıcı kazanımı, ASO ve topluluk yönetimi stratejileri kurgulayan bir Game Marketing Uzmanı.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

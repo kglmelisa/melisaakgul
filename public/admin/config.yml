@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/assets"
+public_folder: "/assets"
+
+collections:
+  - name: "projects"
+    label: "Projeler"
+    folder: "content/projects"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Slug (dosya adı, boşluksuz, İngilizce)", name: "slug", widget: "string" }
+      - { label: "Sıra (küçük sayı önce görünür)", name: "order", widget: "number", value_type: "int" }
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Etiket (örn. Marketing · Content · Community)", name: "tag", widget: "string" }
+      - { label: "Kısa Açıklama", name: "shortDescription", widget: "text" }
+      - { label: "Görsel", name: "image", widget: "image" }
+      - { label: "Case Study Metni (opsiyonel, boşsa Steam butonu gösterilir)", name: "content", widget: "text", required: false }
+      - label: "Sonuçlar (opsiyonel istatistikler)"
+        name: "results"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Etiket", name: "label", widget: "string" }
+          - { label: "Değer", name: "value", widget: "string" }
+      - { label: "Steam Linki", name: "steamUrl", widget: "string" }
+
+  - name: "settings"
+    label: "Genel Ayarlar"
+    files:
+      - name: "settings"
+        label: "İletişim & Fotoğraflar"
+        file: "content/settings.json"
+        fields:
+          - { label: "E-posta", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "Ana Sayfa Portre Fotoğrafı", name: "heroPortrait", widget: "image" }
+          - { label: "Hakkımda Fotoğrafı", name: "aboutPhoto", widget: "image" }
